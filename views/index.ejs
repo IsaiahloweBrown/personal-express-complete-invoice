@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice ASAP</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section class="top-area">
+    <h2>Invoice ASAP</h2>
+  </section>
+ 
+
+  <section class="form-area">
+    <form action="/invoices" method="POST">
+      <label for="name">Company Name:</label>
+      <input type="text" placeholder="name" name="company">
+      <label for="name">Client Name:</label>
+      <input type="text" placeholder="message" name="client">
+      <label for="name">Due Date:</label>
+      <input type="date" placeholder="name" name="dueDate">
+      <label for="number">Balance Owed:</label>
+      <input type="text" placeholder="message" name="balance">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+  
+  <section class="invoice-header">
+    <h3>Current Invoices</h3>
+  </section>
+  <section class="invoice-area">
+    <h2>Paid invoices</h2>
+    <ul class="invoices">
+      <% for(var i=0; i<invoices.length; i++) {%>
+        <% if(invoices[i].hasBeenPaid === true) {%>
+          <li class="invoice">
+            <span class="company"><%= invoices[i].company %></span>
+            <span class=""><%= invoices[i].client %></span>
+            <span class=""><%= invoices[i].dueDate %></span>
+            <span class=""><%= invoices[i].balance %></span>
+            <span class=""><i id="green" class="fa fa-check" aria-hidden="true" name="green"></i></span>
+            <span class=""><i class="fa fa-remove" aria-hidden="true"></i></span>
+            <span class=""><i class="fa fa-cross" aria-hidden="true"></i></span>
+          </li>
+        <% } %>
+      
+      <% } %>
+    </ul>
+    <h2>Unpaid invoices</h2>
+    <ul class="invoices">
+        <% for(var i=0; i<invoices.length; i++) {%>
+          <% if(invoices[i].hasBeenPaid === false) {%>
+            <li class="invoice">
+              <span class="company"><%= invoices[i].company %></span>
+              <span class=""><%= invoices[i].client %></span>
+              <span class=""><%= invoices[i].dueDate %></span>
+              <span class=""><%= invoices[i].balance %></span>
+              <span class=""><i id="green" class="fa fa-check" aria-hidden="true"></i></span>
+              <span class=""><i class="fa fa-remove" aria-hidden="true"></i></span>
+              <span class=""><i class="fa fa-cross" aria-hidden="true"></i></span>
+            </li>
+          <% } %>
+        
+        <% } %>
+      </ul>
+  </section>
+  
+
+  
+
+ 
+  <script src="main.js"></script>
+
+</body>
+</html>
