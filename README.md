@@ -1,11 +1,8 @@
-![21 Savage](public/21savage.jpg)
+
 
 ## Installation
 
-1. Clone repo
-2. run `npm install`
+![image](https://user-images.githubusercontent.com/112201564/201549231-aa98db56-0811-42a5-90a1-47aed5b6f3d1.png)
 
-## Usage
+Update coming soon!
 
-1. run `npm run savage`
-2. Navigate to `localhost:3000`
