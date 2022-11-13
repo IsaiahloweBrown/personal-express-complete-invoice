@@ -1,6 +1,6 @@
-var paid = document.getElementsByClassName("fa-check");
-var unpaid = document.getElementsByClassName("fa-remove");
-var trash = document.getElementsByClassName("fa-trash-o");
+var paid  = document.getElementsByName("done");
+var unpaid = document.getElementsByName("close");
+// var trash = document.getElementsByName("delete");
 
 Array.from(paid).forEach(function(element) {
       element.addEventListener('click', function(event){
@@ -107,21 +107,25 @@ Array.from(unpaid).forEach(function(element) {
 //   });
 // });
 
-Array.from(trash).forEach(function(element) {
-      element.addEventListener('click', function(){
-        const name = this.parentNode.parentNode.childNodes[1].innerText
-        const msg = this.parentNode.parentNode.childNodes[3].innerText
-        fetch('messages', {
-          method: 'delete',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            'name': name,
-            'msg': msg
-          })
-        }).then(function (response) {
-          window.location.reload()
-        })
-      });
-});
+// Array.from(trash).forEach(function(element) {
+//       element.addEventListener('click', function(){
+//         const company = this.parentNode.parentNode.childNodes[1].innerText
+//         const client = this.parentNode.parentNode.childNodes[3].innerText
+//         const dueDate = this.parentNode.parentNode.childNodes[5].innerText
+//         const balance = this.parentNode.parentNode.childNodes[7].innerText
+//         fetch('invoices', {
+//           method: 'delete',
+//           headers: {
+//             'Content-Type': 'application/json'
+//           },
+//           body: JSON.stringify({
+//             'company': company,
+//             'client': client,
+//             'dueDate': dueDate,
+//             'balance': balance
+//           })
+//         }).then(function (response) {
+//           window.location.reload()
+//         })
+//       });
+// });

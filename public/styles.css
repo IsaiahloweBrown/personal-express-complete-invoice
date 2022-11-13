@@ -1,12 +1,84 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Kaushan+Script&family=PT+Sans+Caption:wght@400;700&display=swap');
 
-  box-sizing: border-box;
+:root, body{
+  word-wrap:break-word;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgb(242, 157, 0, 0.7)
+  ), url("./img/tyler-bg.webp");
+  /* https://stackoverflow.com/questions/16841323/making-gradient-background-fill-page-with-css */
+  /* This was mad hepful and background mdn */
+    background-size: cover;
+    height: 100%;
+    image-rendering:crisp-edges;
+   
+    
+ 
 }
 
-body {
- background: rgb(133, 133, 255, 0.5);
+.index-header {
+  font-family: 'Kaushan Script', cursive, 'Arial';
+  
+ 
 }
 
-.money-green {
- background: green;
+.container {
+  padding-top: 12%;
+}
+
+h1, h2, h3, span {
+  color: white
+}
+
+.well {
+  color: rgb(255, 0, 0);
+  background-color: black;
+}
+
+
+.card {
+
+  position: absolute;
+  width: 30%;
+  padding: 3rem 2.5rem;
+  background: rgb(0, 0, 0, 0.75);
+  border-radius: 15px;
+  color: white;
+
+}
+
+.card button {
+  text-align: center;
+}
+
+
+
+.hidden {
+  display: none;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.invoice {
+  margin: 7%;
+  background: rgb(255, 0, 0);
+  color:white;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.invoice-paid {
+  margin: 7%;
+  background: rgb(0, 0, 0);
+  color:white;
+  border: 1px solid rgb(129, 129, 255);
+  border-radius: 5px;
 }
