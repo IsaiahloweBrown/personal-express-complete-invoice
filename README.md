@@ -8,18 +8,16 @@
 
 **Tech used:** CSS, JavaScript, Node.JS, EJS, Express, MongoDB
 
-The pomodoro app allows you to add a pomodoro task. There is a timer to track your time on your tasks in the same place. Once, you have complete a task you can click the check mark and it was go to the completed section. If you no longer want to complete the task, you can delete it with the trash day.
+The invoice tracks app allows you to add invoices. There is two sections that allow you manage your current invoices and paid invoices. 
 
 
 
 ## Features in the Future:
 
 
+- Ability to alert user when invoice is due
+- Ability to send invoice summary to client
 
-- Background changes randomly every few seconds
-- I want the user to be able to change the background or dark mode
-- I want to include a simple refresh button for timer
-- I will allow the timer to run even after page reload
 
 
 
